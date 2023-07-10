@@ -6,7 +6,15 @@
     .container{
         padding: 0 15px;
     }
-
+    header{
+        min-height: 46px;
+    }
+    .icon_container {
+        position: absolute;
+        top: 15px;
+        right: 15px;
+        list-style: none;
+    }
     nav .menu-btn {
         top: 4%;
         right: -16%;
@@ -120,5 +128,8 @@
 
     nav .nav-links .link:hover {
         color: rgba(0, 0, 0, .5);
+    }
+    .main__container{
+        flex-direction: column;
     }
 }
