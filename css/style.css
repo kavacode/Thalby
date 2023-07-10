@@ -1,0 +1,88 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+/*================ HEADER ================*/
+
+header{
+    background-color: #ffffff;
+    padding: 15px 0;
+}
+[class*="__container"]{
+    max-width: 1064px;
+    margin: auto;
+    padding: 0 15px;
+}
+.header__container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+header .header__logo{
+    position: absolute;
+    left: 50%;
+    top: 22px;
+    margin-left: -10px;
+    z-index: 99;
+}
+.link{
+    color: #1C1B1B;
+    font-family: Roboto;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 26.4px;
+    text-decoration: none;
+    margin-right: 28px;
+}
+.icon_container{
+    display: flex;
+    column-gap: 25px;
+    align-items: center;
+    list-style: none;
+
+}
+
+/*================ MAIN SECTION ================*/
+
+.main {
+    padding-top: 9px;
+    padding-bottom: 24px;
+    background: #F0EFEB;
+}
+.main__container{
+    display: flex;
+    /*max-width: 1108px;*/
+}
+.main__text h1{
+    color: #000;
+    font-family: Roboto;
+    font-size: 60px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    padding-bottom: 42px;
+    padding-top: 90px;
+}
+.main__text p{
+    color: #000;
+    font-family: Roboto;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    padding-bottom: 26px;
+}
+.main__text a{
+    color: #FFF;
+    font-family: Roboto;
+    font-size: 17px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    border-radius: 100px;
+    border: 1px solid #000;
+    background: #000;
+    padding: 7px 23px 9px 23px;
+}
