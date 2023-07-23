@@ -234,9 +234,11 @@ header .header__logo{
 /*    justify-content: center;*/
 /*    align-items: center;*/
 /*}*/
-/*.owl-item{*/
-/*    text-align: center;*/
-/*}*/
+.owl-item{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
 .sellers__container{
     padding: 0;
