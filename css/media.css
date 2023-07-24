@@ -201,6 +201,10 @@
 	.culture .text_block{
 	  padding-bottom: 15px;
 	}
+	 .culture .img_block{
+		 margin-right: 0;
+		 margin-left: 0;
+	 }
  }
 /*================ POINTS SECTION ================*/
 @media (max-width: 555px){

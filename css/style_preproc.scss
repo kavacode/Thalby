@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=$main_font:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=$main_font;:wght@400;700&display=swap');
 $black_color:#000;
 $white_color:#fff;
 $main_font:'Roboto', sans-serif;
@@ -62,7 +62,7 @@ header .header__logo {
 
 .menu__link {
   color: #1c1b1b;
-  font-family: 'Roboto', sans-serif;
+  font-family: $main_font;
   font-size: 16px;
   font-style: normal;
   font-weight: 700;
@@ -182,37 +182,62 @@ header .header__logo {
     bottom: 20px;
     left: 41%;
   }
-
-  @media (max-width: 655px) {
-    .menu__icon._active {
-      left: 39%;
-    }
-  }
-
-  @media (max-width: 570px) {
-    .menu__icon._active {
-      left: 40%;
-      column-gap: 10px;
-    }
-  }
-
-  @media (max-width: 428px) {
-    .menu__icon._active {
-      left: 40%;
-      column-gap: 0;
-    }
-
-    header .header__logo {
-      left: 40%;
-    }
-  }
-
-  @media (max-width: 320px) {
-    .menu__icon._active {
-      left: 35%;
-    }
+}
+@media (max-width: 655px) {
+  header .header__container .menu__icon._active {
+    left: 39%;
   }
 }
+
+@media (max-width: 570px) {
+  header .header__container .menu__icon._active {
+    left: 40%;
+    column-gap: 10px;
+  }
+}
+
+@media (max-width: 428px) {
+  header .header__container .menu__icon._active {
+    left: 40%;
+    column-gap: 0;
+  }
+
+  header .header__logo {
+    left: 40%;
+  }
+}
+
+@media (max-width: 320px) {
+  header .header__container .menu__icon {
+    left: 35%;
+  }
+}
+@media (max-width: 655px) {
+  header .header__container .menu__icon {
+    left: 39%;
+  }
+}
+
+@media (max-width: 570px) {
+  header .header__container .menu__icon {
+    left: 40%;
+    column-gap: 10px;
+  }
+}
+
+@media (max-width: 428px) {
+  header .header__container .menu__icon {
+    left: 40%;
+    column-gap: 0;
+  }
+}
+
+@media (max-width: 320px) {
+  header .header__container .menu__icon {
+    left: 35%;
+  }
+}
+
 
 /*================ MAIN SECTION ================*/
 .main {
@@ -229,7 +254,7 @@ header .header__logo {
 
     h1 {
       color: $black_color;
-      font-family: $main_font;
+      font-family: $main_font;;
       font-size: 60px;
       font-style: normal;
       font-weight: 700;
@@ -239,7 +264,7 @@ header .header__logo {
 
     p {
       color: $black_color;
-      font-family: $main_font;
+      font-family: $main_font;;
       font-size: 24px;
       font-style: normal;
       font-weight: 400;
@@ -249,7 +274,7 @@ header .header__logo {
 
     a {
       color: $white_color;
-      font-family: $main_font;
+      font-family: $main_font;;
       font-size: 17px;
       font-style: normal;
       font-weight: 400;
@@ -317,16 +342,17 @@ header .header__logo {
   .guide__container {
     margin-bottom: 87px;
     text-align: center;
+    padding-left: 0;
+    padding-right: 0;
 
     h2 {
       color: $black_color;
-      text-align: center;
-      font-family: 'Roboto', sans-serif;
+      font-family: $main_font;
       font-size: 36px;
-      font-style: normal;
       font-weight: 700;
       line-height: normal;
       margin-bottom: 26px;
+      text-align: center;
     }
 
     .guide__container_text {
@@ -334,12 +360,11 @@ header .header__logo {
 
       p {
         color: $black_color;
-        text-align: center;
-        font-family: 'Roboto', sans-serif;
+        font-family: $main_font;
         font-size: 20px;
-        font-style: normal;
         font-weight: 400;
         line-height: normal;
+        text-align: center;
         margin-bottom: 47px;
       }
     }
@@ -347,79 +372,58 @@ header .header__logo {
 
   h2 {
     color: $black_color;
-    text-align: center;
-    font-family: 'Roboto', sans-serif;
+    font-family: $main_font;
     font-size: 36px;
-    font-style: normal;
     font-weight: 700;
     line-height: normal;
     margin-bottom: 52px;
+    text-align: center;
   }
 
-  &__container {
+  .sellers__container {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding-bottom: 51px;
-  }
+    padding-right: 0;
+    padding-left: 0;
 
-  .thalby_guide {
-    text-align: center;
-    max-width: 314px;
-
-    img {
-      max-width: 100%;
-      display: block;
-      margin-bottom: 27px;
-    }
-
-    h4 {
-      color: $black_color;
+    .thalby_guide {
       text-align: center;
-      font-family: 'Roboto', sans-serif;
-      font-size: 17px;
-      font-style: normal;
-      font-weight: 700;
-      line-height: normal;
-      margin-bottom: 17px;
-    }
+      max-width: 314px;
 
-    p {
-      color: $black_color;
-      text-align: center;
-      font-family: 'Roboto', sans-serif;
-      font-size: 17px;
-      font-style: normal;
-      font-weight: 400;
-      line-height: normal;
-      margin-bottom: 10px;
-    }
+      img {
+        max-width: 100%;
+        display: block;
+        margin-bottom: 27px;
+      }
 
-    a {
-      color: $black_color;
-      text-align: center;
-      font-family: 'Roboto', sans-serif;
-      font-size: 17px;
-      font-style: normal;
-      font-weight: 700;
-      line-height: normal;
-      text-decoration-line: underline;
-    }
-  }
+      h4 {
+        color: $black_color;
+        font-family: $main_font;
+        font-size: 17px;
+        font-weight: 700;
+        line-height: normal;
+        margin-bottom: 17px;
+      }
 
-  @media (max-width: 519px) {
-    padding: 60px 0 60px 0;
+      p {
+        color: $black_color;
+        font-family: $main_font;
+        font-size: 17px;
+        font-weight: 400;
+        line-height: normal;
+        margin-bottom: 10px;
+      }
 
-    .guide__container h2 {
-      font-size: 30px;
-    }
-
-    .guide__container p {
-      font-size: 18px;
-    }
-
-    h2 {
-      font-size: 30px;
+      a {
+        color: $black_color;
+        font-family: $main_font;
+        font-size: 17px;
+        font-weight: 700;
+        line-height: normal;
+        text-decoration-line: underline;
+      }
     }
   }
 }
@@ -445,8 +449,8 @@ header .header__logo {
     font-size: 18px;
   }
 
-  .guide__container {
-    margin-bottom: 60px;
+  .sellers__container {
+    padding: 0;
   }
 
   .sellers h2 {
@@ -458,6 +462,10 @@ header .header__logo {
 .society {
   padding: 76px 0 51px 0;
   background: rgba(204, 204, 204, 0.30);
+
+  &.culture {
+    background: rgba(204, 204, 204, 0.60);
+  }
 
   .description__container {
     display: flex;
@@ -479,7 +487,7 @@ header .header__logo {
 
       h3 {
         color: $black_color;
-        font-family: 'Roboto', sans-serif;
+        font-family: $main_font;
         font-size: 36px;
         font-style: normal;
         font-weight: 700;
@@ -489,7 +497,7 @@ header .header__logo {
 
       p {
         color: $black_color;
-        font-family: 'Roboto', sans-serif;
+        font-family: $main_font;
         font-size: 36px;
         font-style: normal;
         font-weight: 400;
@@ -499,7 +507,7 @@ header .header__logo {
 
       a {
         color: $black_color;
-        font-family: 'Roboto', sans-serif;
+        font-family: $main_font;
         font-size: 17px;
         font-style: normal;
         font-weight: 700;
@@ -509,54 +517,106 @@ header .header__logo {
     }
   }
 
-  &.culture {
-    background: rgba(204, 204, 204, 0.60);
-
+  &.power {
     .img_block {
-      margin-right: 0;
-      margin-left: 50px;
+      img {
+        max-width: 100%;
+        display: block;
+      }
     }
 
     .text_block {
-      text-align: right;
+      max-width: 530px;
+      text-align: left;
+      padding-top: 63px;
+
+      h3 {
+        color: $black_color;
+        font-family: $main_font;
+        font-size: 36px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+        margin-bottom: 31px;
+      }
+
+      p {
+        color: $black_color;
+        font-family: $main_font;
+        font-size: 36px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        margin-bottom: 40px;
+      }
+
+      a {
+        color: $black_color;
+        font-family: $main_font;
+        font-size: 17px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+        text-decoration-line: underline;
+      }
     }
   }
-
-  @media (max-width: 869px) {
+}
+@media (max-width: 869px) {
+  .society {
     .description__container {
       flex-direction: column;
       justify-content: center;
       align-items: center;
     }
   }
-
-  @media (max-width: 519px) {
+}
+@media (max-width: 519px) {
+  .society {
     padding: 50px 0 40px 0;
 
-    .text_block {
-      padding-top: 40px;
 
-      h3 {
-        font-size: 30px;
-        margin-bottom: 20px;
+    .description__container {
+
+
+      .img_block {
+        margin-right: 0;
+        margin-bottom: 20px; // Add some margin between the image and text
       }
 
-      p {
-        font-size: 28px;
+      .text_block {
         text-align: center;
-        padding-top: 50px;
+        padding-top: 40px;
+
+        h3 {
+          font-size: 30px;
+          margin-bottom: 20px;
+        }
+
+        p {
+          font-size: 28px;
+          padding-top: 20px; // Adjust the padding
+          margin-bottom: 20px;
+        }
+
+        a {
+          display: block;
+          font-size: 17px;
+          margin-bottom: 20px;
+        }
       }
     }
+  }
 
-    .img_block {
-      margin-right: 0;
-    }
-
-    &.culture .text_block {
-      padding-bottom: 15px;
+  .culture {
+    .description__container {
+      .text_block {
+        padding-bottom: 15px;
+      }
     }
   }
 }
+
 /*================ POINTS SECTION ================*/
 
 .points {
@@ -569,7 +629,7 @@ header .header__logo {
     h3 {
       color: $black_color;
       text-align: center;
-      font-family: 'Roboto', sans-serif;
+      font-family: $main_font;
       font-size: 36px;
       font-style: normal;
       font-weight: 400;
@@ -592,7 +652,7 @@ header .header__logo {
     width: 33%;
     color: $black_color;
     text-align: center;
-    font-family: 'Roboto', sans-serif;
+    font-family: $main_font;
     font-size: 30px;
     font-style: normal;
     font-weight: 700;
@@ -602,7 +662,7 @@ header .header__logo {
     &:before {
       content: "";
       display: block;
-      //margin: auto;
+      margin: auto;
       width: 70px;
       height: 70px;
       border-radius: 50%;
@@ -676,7 +736,7 @@ header .header__logo {
     h3 {
       color: $black_color;
       text-align: center;
-      font-family: 'Roboto', sans-serif;
+      font-family: $main_font;
       font-size: 36px;
       font-style: normal;
       font-weight: 700;
@@ -701,7 +761,7 @@ header .header__logo {
       h4 {
         color: $black_color;
         text-align: center;
-        font-family: 'Roboto', sans-serif;
+        font-family: $main_font;
         font-size: 22px;
         font-style: normal;
         font-weight: 700;
@@ -713,7 +773,7 @@ header .header__logo {
       p {
         color: $black_color;
         text-align: center;
-        font-family: 'Roboto', sans-serif;
+        font-family: $main_font;
         font-size: 20px;
         font-style: normal;
         font-weight: 400;
@@ -724,7 +784,7 @@ header .header__logo {
       a {
         color: $black_color;
         text-align: center;
-        font-family: 'Roboto', sans-serif;
+        font-family: $main_font;
         font-size: 18px;
         font-style: normal;
         font-weight: 700;
@@ -784,7 +844,7 @@ header .header__logo {
     h3 {
       color: $black_color;
       text-align: center;
-      font-family: 'Roboto', sans-serif;
+      font-family: $main_font;
       font-size: 36px;
       font-style: normal;
       font-weight: 700;
@@ -796,7 +856,7 @@ header .header__logo {
     p {
       color: $black_color;
       text-align: center;
-      font-family: 'Roboto', sans-serif;
+      font-family: $main_font;
       font-size: 17px;
       font-style: normal;
       font-weight: 700;
@@ -817,7 +877,7 @@ header .header__logo {
     input::placeholder {
       color: #A0A0A0;
       text-align: left;
-      font-family: 'Roboto', sans-serif;
+      font-family: $main_font;
       font-size: 14px;
       font-style: normal;
       font-weight: 400;
@@ -832,7 +892,7 @@ header .header__logo {
       input {
         border: 1px solid $black_color;
         padding: 0 5px;
-        width: 153px;
+        max-width: 153px;
         height: 39px;
       }
     }
@@ -856,7 +916,7 @@ header .header__logo {
         background: $black_color;
         color: $white_color;
         text-align: center;
-        font-family: 'Roboto', sans-serif;
+        font-family: $main_font;
         font-size: 14px;
         font-style: normal;
         font-weight: 400;
@@ -865,49 +925,50 @@ header .header__logo {
       }
     }
   }
-
+}
   @media (max-width: 519px) {
-    padding: 50px 0 50px 0;
+    .keep {
+      padding: 50px 0 50px 0;
 
-    .keep__container h3 {
-      font-size: 30px;
-    }
+      .keep__container h3 {
+        font-size: 30px;
+      }
 
-    .keep__container p {
-      font-size: 15px;
-    }
+      .keep__container p {
+        font-size: 15px;
+      }
 
-    .keep__form input::placeholder {
-      font-size: 13px;
+      .keep__container .keep__form input::placeholder {
+        font-size: 13px;
+      }
     }
   }
-
   @media (max-width: 400px) {
-    .keep__input_email input {
+    .keep .keep__container .keep__form .keep__input_email input {
       max-width: 325px;
     }
 
-    .keep__input_name input {
-      width: 138px;
+    .keep .keep__container .keep__form .keep__input_name input {
+      max-width: 138px;
     }
   }
 
   @media (max-width: 351px) {
-    .keep__input_email input {
+    .keep .keep__container .keep__form .keep__input_email input {
       max-width: 295px;
     }
   }
 
   @media (max-width: 330px) {
-    .keep__input_email input {
+    .keep .keep__container .keep__form .keep__input_email input {
       max-width: 289px;
     }
 
-    .keep__container {
+    .keep .keep__container {
       padding: 0 5px;
     }
   }
-}
+
 
 /*================ FOOTER SECTION ================*/
 footer {
@@ -926,7 +987,7 @@ footer {
 
 .footer__logo {
   max-width: 129px;
-  height: 41px;
+  padding-bottom: 20px;
 
   img {
     max-width: 100%;
@@ -955,7 +1016,7 @@ footer {
 
   li {
     color: $white_color;
-    font-family: 'Roboto', sans-serif;
+    font-family: $main_font;
     font-size: 14px;
     font-style: normal;
     font-weight: 400;
@@ -985,7 +1046,7 @@ footer {
 
   li {
     color: $white_color;
-    font-family: 'Roboto', sans-serif;
+    font-family: $main_font;
     font-size: 14px;
     font-style: normal;
     font-weight: 400;
@@ -1007,7 +1068,7 @@ footer {
   p {
     color: $white_color;
     text-align: center;
-    font-family: 'Roboto', sans-serif;
+    font-family: $main_font;
     font-size: 14px;
     font-style: normal;
     font-weight: 400;
