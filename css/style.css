@@ -343,7 +343,7 @@ header .header__logo{
 .points .pointer:before{
     content: "";
     display: block;
-    /*margin: auto;*/
+    margin: auto;
     width: 70px;
     height: 70px;
     border-radius: 50%;
